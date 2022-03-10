@@ -1,0 +1,234 @@
+/*변수를 통한 값 지정*/
+:root{
+    --white-color: #FFF;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+
+    --padding :12px;
+    --avatar-size: 36px;
+
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*폰트 전체 적용*/
+    /*font-family: Roboto;*/
+}
+button,
+button:focus{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--white-color);
+}
+ul{
+    list-style: none;
+}
+
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+header .logo{
+    font-size: var(--font-large);
+}
+
+/*header .logo i{*/
+/*    color: var(--red-color);*/
+/*}*/
+
+header .icons .fa-search{
+    margin-right: var(--padding);
+
+}
+
+/*video player*/
+.player{
+    text-align: center;
+    background-color: var(--black-color);
+    position: sticky;
+    top:0;
+}
+.player video{
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+
+
+
+
+body > .info{
+    padding: var(--padding);
+}
+.info .metadata .hashtags{
+    display: flex;
+    color: var(--blue-color);
+    font-size: var(--font-small);
+}
+.info .metadata .hashtags li{
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton{
+    display: flex;
+}
+.info .metadata .titleAndButton .title {
+    font-size: var(--font-medium);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-right: var(--padding);
+}
+.info .metadata .titleAndButton .moreBtn{
+    height: 100%;
+}
+
+.info .views{
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.info .action{
+    display: flex;
+    justify-content: space-around;
+}
+
+.info .action button{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+    margin: var(--padding) 0;
+}
+
+.info .action button i{
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding)/2);
+    font-size: 16px;
+    color: var(--grey-darl-color);
+}
+.info .action button span{
+    margin: 0 auto;
+}
+
+.info .action button i.active{
+    color: var(--blue-color);
+}
+
+.info .channel{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+}
+.info .channel .metadata{
+    display: flex;
+    align-items: center; /*세로정렬*/
+
+}
+
+.info .channel .metadata img{
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+.info .channel .metadata .info{
+    display: flex;
+    flex-direction: column;
+}
+.info .channel .metadata .info .name{
+    font-size: var(--font-medium);
+}
+
+.info .channel .metadata .info .subscribers{
+    font-size: var(--font-small);
+    color : var(--grey-dark-color)
+}
+
+.info .channel .subscriber{
+    color : var(--red-color);
+    font-size: var(--font-medium);
+    margin-right: var(--padding);
+}
+
+
+
+.upNext{
+    padding : 0 var(--padding);
+}
+
+.upNext >.title{
+    font-size: var( --font-small);
+    color: var( --grey-dark-color);
+    margin-bottom: calc(var(--padding/2));
+}
+
+.upNext .item{
+    display: flex;
+    margin-top: var(--padding);
+}
+.upNext .item .img{
+    flex: 1 1 35%;
+    margin-right: var(--padding);
+}
+.upNext .item .img img{
+    width: 100%;
+}
+.upNext .item .info{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 60%;
+
+}
+.upNext .item .moreBtn{
+    height: 100%;
+    flex: 1 1 5%;
+}
+
+
+.upNext .item .info .name,
+.upNext .item .info .views{
+    font-size:var( --font-micro) ;
+    color: var(--grey-dark-color);
+}
+
+
+.infoAndUpNext{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width : 786px){
+    .infoAndUpNext{
+        flex-direction: row;
+        margin: var( --padding);
+
+    }
+
+
+}
+
+
+/*
+유튜브 마지막에 js활용해서 clamp없애는거 아이콘 180돌아가는거 누락되어있음*/
